@@ -12,7 +12,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AccountRepositoryTest extends BaseControllerTest {
     @DisplayName("Account를 조회하는 테스트")
     @Test
-    // @Transactional
     void findByEmailTest() {
         Account account = accountRepository.findByEmail(email);
         Set<MyGenre> myGenres = myGenreRepository.findByAccount(account);

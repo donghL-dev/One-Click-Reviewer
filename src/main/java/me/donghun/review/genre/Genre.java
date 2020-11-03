@@ -1,9 +1,7 @@
 package me.donghun.review.genre;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import me.donghun.review.moviegenre.MovieGenre;
 import me.donghun.review.mygenre.MyGenre;
 
 import javax.persistence.*;
@@ -27,5 +25,8 @@ public class Genre implements Serializable {
 
     @OneToMany(mappedBy = "genre", fetch = FetchType.LAZY)
     private final Set<MyGenre> myGenres = new HashSet<>();
+
+    @OneToMany(mappedBy = "genre", fetch = FetchType.LAZY)
+    private final Set<MovieGenre>  movieGenres = new HashSet<>();
 
 }

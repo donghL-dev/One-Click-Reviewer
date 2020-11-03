@@ -1,9 +1,7 @@
 package me.donghun.review.account;
 
 import lombok.*;
-import me.donghun.review.genre.Genre;
 import me.donghun.review.mygenre.MyGenre;
-import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import java.io.Serializable;
